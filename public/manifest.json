@@ -1,0 +1,15 @@
+{
+  "short_name": "OmniCorp Hub",
+  "name": "OmniCorp Hub",
+  "icons": [
+    {
+      "src": "/logo.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#0a0a0a",
+  "background_color": "#0a0a0a"
+}

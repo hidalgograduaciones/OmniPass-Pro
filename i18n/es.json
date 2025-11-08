@@ -1,0 +1,117 @@
+{
+  "nav": {
+    "dashboard": "Dashboard",
+    "invitations": "Invitaciones",
+    "scanner": "Escáner",
+    "integrations": "Integraciones",
+    "settings": "Ajustes",
+    "logout": "Cerrar Sesión"
+  },
+  "header": {
+    "searchPlaceholder": "Buscar..."
+  },
+  "user": {
+    "roleAdmin": "Admin",
+    "roleManager": "Gerente",
+    "roleUser": "Usuario"
+  },
+  "dashboard": {
+    "apiUsage": "Analítica de Uso de API",
+    "quickAccess": "Acceso Rápido",
+    "generateInvitation": "Generar Nueva Invitación",
+    "connectService": "Conectar Nuevo Servicio",
+    "viewLogs": "Ver Registros de Auditoría",
+    "createAutomation": "Crear Automatización",
+    "stats": {
+      "apiCalls": "Llamadas API (24h)",
+      "activeAutomations": "Automatizaciones Activas",
+      "invitationsGenerated": "Invitaciones Generadas",
+      "guestsCheckedIn": "Invitados Registrados"
+    },
+    "chart": {
+      "gemini": "Gemini",
+      "openAI": "OpenAI"
+    }
+  },
+  "invitations": {
+    "title": "Invitaciones Inteligentes",
+    "generateNew": "Generar Nueva Invitación",
+    "table": {
+      "eventName": "Nombre del Evento",
+      "recipient": "Destinatario",
+      "role": "Rol",
+      "date": "Fecha",
+      "status": "Estado",
+      "actions": "Acciones",
+      "details": "Detalles"
+    },
+    "modal": {
+      "title": "Generar Invitación Inteligente",
+      "success": "¡Invitación Generada!",
+      "successText": "Token QR para {{eventName}} enviado a {{recipient}}.",
+      "close": "Cerrar",
+      "download": "Descargar Invitación",
+      "eventName": "Nombre del Evento",
+      "recipientEmail": "Email del Destinatario",
+      "guestRole": "Rol del Invitado",
+      "eventDetails": "Detalles del Evento (Opcional)",
+      "generating": "Generando...",
+      "generateWithGemini": "✨ Generar con Gemini",
+      "generateToken": "Generar Token QR",
+      "errorEventName": "Por favor, introduce primero un nombre para el evento.",
+      "errorFillFields": "Por favor, rellena todos los campos."
+    }
+  },
+  "integrations": {
+    "title": "Hub de Integración IA",
+    "description": "Conecta y gestiona tus modelos de IA y servicios externos para construir potentes automatizaciones.",
+    "manage": "Gestionar",
+    "connect": "Conectar"
+  },
+  "scanner": {
+    "title": "Aura Check-in",
+    "subtitle": "Alinea el código QR en el marco para validar la invitación",
+    "errorNoCamera": "No se encontraron cámaras.",
+    "errorAccessCamera": "No se pudo acceder a la cámara. Por favor, concede permiso y actualiza.",
+    "errorStartScanner": "Fallo al iniciar el escáner. Por favor, comprueba los permisos de la cámara.",
+    "generatingGreeting": "Generando saludo personalizado...",
+    "duplicateMessage": "Esta invitación ya ha sido validada.",
+    "scanNext": "Escanear Siguiente"
+  },
+  "sidebar": {
+    "pro": "Smart Invitations Pro",
+    "credits": "Hec (Eiden Alfa) & Gemini IA",
+    "quote": "“La magia ocurre cuando la tecnología deja de ser herramienta y se vuelve experiencia.”"
+  },
+  "roles": {
+    "guest": "Invitado",
+    "vip": "VIP",
+    "speaker": "Ponente",
+    "press": "Prensa"
+  },
+  "statuses": {
+    "pending": "Pendiente",
+    "validated": "Validado",
+    "expired": "Expirado",
+    "valid": "Válido",
+    "duplicate": "Duplicado",
+    "invalid": "Inválido"
+  },
+  "services": {
+    "gemini": {
+      "failDetails": "No se pudieron generar los detalles. Por favor, escríbelos manualmente."
+    }
+  },
+  "login": {
+    "welcome": "Bienvenido de Nuevo",
+    "signInToAccess": "Inicia sesión para acceder al OmniCorp Hub.",
+    "emailPlaceholder": "Dirección de Email",
+    "passwordPlaceholder": "Contraseña",
+    "rememberMe": "Recordarme",
+    "forgotPassword": "¿Olvidaste la contraseña?",
+    "signIn": "Iniciar Sesión",
+    "orContinueWith": "O continuar con",
+    "signInWithGoogle": "Iniciar sesión con Google",
+    "alertEnterCredentials": "Por favor, introduce email y contraseña."
+  }
+}

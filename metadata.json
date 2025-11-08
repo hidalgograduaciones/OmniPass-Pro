@@ -1,0 +1,7 @@
+{
+  "name": "OmniCorp Hub",
+  "description": "OmniCorp Hub serves as the core of a premium ecosystem for intelligence and automation, featuring a real-time analytics dashboard, a smart QR code invitation system, and a central hub for integrating various AI and external services.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
