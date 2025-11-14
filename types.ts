@@ -44,3 +44,12 @@ export interface ChartData {
   gemini: number;
   openAI: number;
 }
+
+export interface ActivityLog {
+  id: string;
+  recipient: string;
+  eventName: string;
+  role: GuestRole;
+  status: ValidationStatus;
+  timestamp: number;
+}

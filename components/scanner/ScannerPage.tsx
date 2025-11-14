@@ -2,23 +2,11 @@ import React, { useState } from 'react';
 import ScannerView from './ScannerView';
 import ValidationAura from './ValidationAura';
 import { QRTokenPayload } from '../../types';
-import { io } from "socket.io-client";
-
-// FASE 1 — Conectar el Núcleo (Comunicación en tiempo real)
-// Conexión con el servidor de sincronía OmniCorp.
-// En producción, esta URL debería provenir de una variable de entorno.
-const socket = io("http://localhost:4000");
-
-socket.on('connect', () => {
-  console.log('🟢 Conectado al Núcleo de Sincronización de OmniCorp.');
-});
-
-socket.on('disconnect', () => {
-  console.log('🔴 Desconectado del Núcleo de Sincronización de OmniCorp.');
-});
+import { useSocket } from '../../hooks/useSocket';
 
 
 const ScannerPage: React.FC = () => {
+  const { socket } = useSocket();
   const [scanResult, setScanResult] = useState<QRTokenPayload | null>(null);
   const [scannedCodes, setScannedCodes] = useState<Set<string>>(new Set());
   const [isDuplicate, setIsDuplicate] = useState(false);
@@ -37,11 +25,13 @@ const ScannerPage: React.FC = () => {
 
     // Enviar el evento de escaneo al servidor de sincronía.
     // Esto permite que el dashboard y los sistemas de proyección reaccionen en tiempo real.
-    socket.emit("qrScanned", { 
-      payload: decodedData, 
-      timestamp: Date.now(),
-      isDuplicate: !isNewScan,
-    });
+    if (socket) {
+      socket.emit("qrScanned", { 
+        payload: decodedData, 
+        timestamp: Date.now(),
+        isDuplicate: !isNewScan,
+      });
+    }
   };
 
   const handleScanFailure = (error: string) => {

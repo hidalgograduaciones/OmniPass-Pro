@@ -31,6 +31,10 @@
     "chart": {
       "gemini": "Gemini",
       "openAI": "OpenAI"
+    },
+    "realtimeActivity": {
+      "title": "Real-time Activity",
+      "waiting": "Waiting for check-in events..."
     }
   },
   "invitations": {
@@ -60,6 +64,12 @@
       "generateToken": "Generate QR Token",
       "errorEventName": "Please enter an event name first.",
       "errorFillFields": "Please fill in all fields."
+    },
+    "printable": {
+      "title": "Printable Guest List",
+      "print": "Print",
+      "header": "Guest Manifest",
+      "printList": "Print List"
     }
   },
   "integrations": {

@@ -5,6 +5,7 @@ import Card from '../ui/Card';
 import Button from '../ui/Button';
 import QRCodeGeneratorModal from './QRCodeGeneratorModal';
 import { useLanguage } from '../../hooks/useLanguage';
+import PrintableGuestList from './PrintableGuestList';
 
 const statusColorMap = {
   Pending: 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30',
@@ -23,6 +24,7 @@ const InvitationsPage: React.FC = () => {
   const { t } = useLanguage();
   const [invitations, setInvitations] = useState<Invitation[]>(MOCK_INVITATIONS);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isPrintViewOpen, setIsPrintViewOpen] = useState(false);
 
   const handleAddInvitation = (newInvitation: Invitation) => {
     setInvitations(prev => [newInvitation, ...prev]);
@@ -33,7 +35,10 @@ const InvitationsPage: React.FC = () => {
       <Card>
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-xl font-bold text-white">{t('invitations.title')}</h2>
-          <Button onClick={() => setIsModalOpen(true)}>{t('invitations.generateNew')}</Button>
+          <div className="flex items-center space-x-4">
+            <Button variant="ghost" onClick={() => setIsPrintViewOpen(true)}>{t('invitations.printable.printList')}</Button>
+            <Button onClick={() => setIsModalOpen(true)}>{t('invitations.generateNew')}</Button>
+          </div>
         </div>
         <div className="overflow-x-auto">
           <table className="w-full text-left">
@@ -69,6 +74,7 @@ const InvitationsPage: React.FC = () => {
         </div>
       </Card>
       {isModalOpen && <QRCodeGeneratorModal onClose={() => setIsModalOpen(false)} onAddInvitation={handleAddInvitation} />}
+      {isPrintViewOpen && <PrintableGuestList invitations={invitations} onClose={() => setIsPrintViewOpen(false)} />}
     </>
   );
 };
